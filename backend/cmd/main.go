@@ -8,3 +8,5 @@ func main() {
 	e.Start(":8080")
 
 }
+
+// go will ingest images into a queue another goroutine will pick images concurrenlty and process them ? 
