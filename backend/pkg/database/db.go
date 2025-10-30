@@ -19,6 +19,8 @@ type DatabaseConfig struct {
 func InitDB(dbconfig *DatabaseConfig) (*pgxpool.Pool, error) {
 	conn_str := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=%s", dbconfig.Host, dbconfig.Port, dbconfig.User, dbconfig.Password, dbconfig.DBName, dbconfig.SslMode)
 	config, err := pgxpool.ParseConfig(conn_str)
+	config.MaxConns=100
+	
 	if err != nil {
 		return nil, err
 	}
