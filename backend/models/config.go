@@ -1,6 +1,8 @@
 package models
 
 type MinioConfig struct {
-	BucketName string `json:"bucket_name"`
-	Prefix     string `json:"prefix"`
+	InputBucketName string `json:"input_bucket_name"`
+	InputKey    string `json:"input_key"`
+	OutputBucketName string `json:"ouput_bucket_name"`
+	OutputKey string `json:"output_key"`
 }

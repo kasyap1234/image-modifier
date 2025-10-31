@@ -1,8 +1,10 @@
 package handlers
 
-import "github.com/kasyap1234/form-reader/models"
+import (
+	"github.com/hibiken/asynq"
+	"github.com/kasyap1234/form-reader/models"
+	"github.com/kasyap1234/form-reader/pkg"
+)
 
 // ingestion handler will ingest tasks to the task queue
-func PushToQueue(job *models.Job){
-	
-}
+func PushToQueue(task *models.TaskImagePayload)
