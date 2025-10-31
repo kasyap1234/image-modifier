@@ -9,4 +9,7 @@ type TaskImagePayload struct {
 	Image   Imageconfig `json:"image_config"`
 	OuputPath  string         `json:"output_path"`
 	Parameters map[string]any `json:"parameters"`
+	Status string `json:"status"`
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
 }
